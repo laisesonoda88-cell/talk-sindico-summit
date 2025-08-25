@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta de Patrocínio - Talk Síndico Summit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+            overflow: hidden; /* Prevents scrolling the main body */
+            background-color: #0A2240; /* Azul Escuro Sóbrio */
+        }
+        .font-heading {
+            font-family: 'Anton', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .slide {
+            min-height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+            visibility: hidden;
+            z-index: 10;
+        }
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 20;
+        }
+        .nav-arrow {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 30;
+            cursor: pointer;
+            background-color: rgba(255, 201, 74, 0.8); /* Dourado */
+            color: #0A2240; /* Azul Escuro */
+            border-radius: 9999px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        .nav-arrow:hover {
+            background-color: #FFC94A; /* Dourado mais forte */
+        }
+        #prevBtn {
+            left: 20px;
+        }
+        #nextBtn {
+            right: 20px;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 2px solid #FFC94A;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+        }
+        .text-gold-brand {
+            color: #FFC94A;
+        }
+        .bg-gold-brand {
+            background-color: #FFC94A;
+        }
+        .border-gold-brand {
+            border-color: #FFC94A;
+        }
+    </style>
+</head>
+<body class="bg-[#0A2240] text-white">
+
+    <main id="presentation-container">
+        <!-- Slide 1: Capa -->
+        <section id="slide1" class="slide active flex flex-col items-center justify-center text-center p-8 bg-cover bg-center" style="background-image: linear-gradient(rgba(10, 34, 64, 0.85), rgba(10, 34, 64, 0.85)), url('https://storage.googleapis.com/gemini-prod-us-west1-423901-d87b/images/Design-sem-nome-11-1.png');">
+            <div class="max-w-4xl">
+                 <!-- Logo do Talk Síndico -->
+                <img src="https://storage.googleapis.com/gemini-prod-us-west1-423901-d87b/images/logo_png.png" alt="Logo Talk Síndico" class="h-24 mx-auto mb-4">
+                
+                <!-- Logo do Evento -->
+                <svg class="w-full max-w-2xl mx-auto" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+                  <style>
+                    .logo-highlight-text { font-family: 'Anton', sans-serif; font-size: 50px; fill: #FFC94A; text-transform: uppercase; letter-spacing: 1px;}
+                  </style>
+                  <text x="50%" y="60" dominant-baseline="middle" text-anchor="middle" class="logo-highlight-text" style="font-size: 80px;">SUMMIT</text>
+                </svg>
+
+                <p class="mt-2 text-xl md:text-2xl text-gray-200">Onde as vozes do mercado condominial se encontram para fazer história.</p>
+                <div class="mt-8 text-lg font-semibold bg-white/10 backdrop-blur-sm py-3 px-6 rounded-full inline-block">
+                    <p>15 de Novembro de 2025 | Aldeia Cowork – Curitiba - PR</p>
+                </div>
+                 <p class="mt-12 text-sm text-gray-400 animate-pulse">Use as setas para navegar</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: Carta-Convite -->
+        <section id="slide2" class="slide flex items-center justify-center p-8">
+            <div class="text-center max-w-4xl flex flex-col md:flex-row items-center gap-8">
+                <img src="http://googleusercontent.com/file_content/1" alt="Foto de Laise Sonoda" class="w-48 h-64 md:w-64 md:h-80 object-cover rounded-2xl border-4 border-gold-brand shadow-lg">
+                <div class="text-left">
+                    <h2 class="font-heading text-4xl md:text-5xl text-gold-brand">De Convidado a Protagonista</h2>
+                    <div class="mt-4 text-lg bg-white/5 p-6 rounded-2xl border-2 border-transparent">
+                        <p class="text-gray-300">Olá, <span class="font-bold text-white" id="sponsor-name">[Nome do Convidado]</span>,</p>
+                        <p class="mt-4 text-gray-300">Sua participação em nosso podcast foi um marco. Agora, queremos você brilhando no palco do nosso primeiro grande evento.</p>
+                        <p class="mt-4 text-gray-300">Este é um convite exclusivo para você se posicionar como um dos <span class="text-gold-brand font-semibold">apoiadores fundadores</span> do Talk Síndico Summit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Sobre o Summit -->
+        <section id="slide3" class="slide flex items-center justify-center p-8">
+            <div class="max-w-5xl w-full flex flex-col md:flex-row items-center gap-10">
+                <div class="w-full md:w-1/2">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-423901-d87b/images/Design-sem-nome-12-1.png" alt="Networking e coffee break do evento" class="rounded-2xl shadow-lg w-full h-full object-cover border-4 border-gold-brand/50">
+                </div>
+                <div class="w-full md:w-1/2 text-left">
+                    <h2 class="font-heading text-4xl md:text-5xl text-gold-brand">Um Ecossistema de Crescimento e Liderança</h2>
+                    <p class="mt-4 text-lg text-gray-300">Um ambiente criado para gerar conexões de alto nível, negócios e conteúdo relevante.</p>
+                    <div class="mt-6 space-y-4">
+                        <div class="card p-4">
+                            <h3 class="font-heading text-xl text-white">Missão do Evento</h3>
+                            <p class="mt-1 text-gray-300">Ser o principal ponto de encontro para as lideranças do mercado, fomentando inovação e parcerias.</p>
+                        </div>
+                        <div class="card p-4">
+                            <h3 class="font-heading text-xl text-white">Público-Alvo Qualificado</h3>
+                            <p class="mt-1 text-gray-300">Conexão com <span class="font-semibold text-gold-brand">síndicos e gestores</span> em busca de desenvolvimento profissional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Slide 4: Plataforma de Crescimento -->
+        <section id="slide4" class="slide flex items-center justify-center p-8">
+            <div class="max-w-5xl w-full flex flex-col md:flex-row items-center gap-10">
+                <div class="w-full md:w-1/2 text-left">
+                    <h2 class="font-heading text-4xl md:text-5xl text-gold-brand">Plataforma para o Seu Crescimento</h2>
+                    <p class="mt-4 text-lg text-gray-300">Ao patrocinar o Summit, sua marca se associa diretamente ao desenvolvimento e à profissionalização do mercado condominial.</p>
+                    <ul class="mt-6 space-y-3 text-gray-200">
+                        <li class="flex items-start"><span class="text-gold-brand mr-3">✓</span> <span><b>Posicione-se como líder:</b> Associe sua marca à educação e ao avanço profissional do setor.</span></li>
+                        <li class="flex items-start"><span class="text-gold-brand mr-3">✓</span> <span><b>Acesso a Talentos:</b> Conecte-se com os profissionais mais ambiciosos e engajados do mercado.</span></li>
+                        <li class="flex items-start"><span class="text-gold-brand mr-3">✓</span> <span><b>Demonstre sua Expertise:</b> Use as palestras e mentorias para se tornar a principal referência em sua área de atuação.</span></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Profissionais em ambiente corporativo" class="rounded-2xl shadow-lg w-full h-full object-cover border-4 border-gold-brand/50">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Projeto de Mentorias -->
+        <section id="slide5" class="slide flex items-center justify-center p-8">
+            <div class="max-w-5xl w-full flex flex-col-reverse md:flex-row items-center gap-10">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" alt="Sessão de mentoria e planejamento" class="rounded-2xl shadow-lg w-full h-full object-cover border-4 border-gold-brand/50">
+                </div>
+                <div class="w-full md:w-1/2 text-left">
+                    <h2 class="font-heading text-4xl md:text-5xl text-gold-brand flex items-center gap-x-4 flex-wrap">
+                        <span>Vá Além do Evento: Projeto Mentorias</span>
+                        <span class="bg-gold-brand text-2xl text-[#0A2240] px-3 py-1 rounded whitespace-nowrap">EM BREVE</span>
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-300">O Talk Síndico está finalizando seu novo programa de mentorias para profissionalizar síndicos e gestores através de consultorias e cursos avançados.</p>
+                    <div class="mt-6 card p-6 bg-gold-brand/10">
+                        <h3 class="font-heading text-xl text-gold-brand">Oportunidade Exclusiva para Patrocinadores</h3>
+                        <p class="mt-2 text-gray-200">Patrocinadores do Summit terão <span class="font-bold">prioridade e condições especiais</span> para se tornarem parceiros estratégicos neste novo projeto, posicionando sua marca na vanguarda da educação condominial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: O Local do Evento -->
+        <section id="slide6" class="slide flex items-center justify-center p-8">
+            <div class="max-w-5xl w-full text-center">
+                <h2 class="font-heading text-4xl md:text-5xl text-gold-brand">Um Local Inspirador para Conexões</h2>
+                <p class="mt-2 text-gray-300">Palestras no auditório principal e mentorias exclusivas em salas privativas.</p>
+                <div class="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-423901-d87b/images/Design-sem-nome-11-1.png" alt="Auditório do evento" class="col-span-2 lg:col-span-2 rounded-2xl object-cover w-full h-full shadow-lg border-2 border-gold-brand/50">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-423901-d87b/images/Sem-nome-646-x-480-px-300-x-350-px-14.png" alt="Sala de mentoria 1" class="rounded-2xl object-cover w-full h-full shadow-lg border-2 border-gold-brand/50">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-423901-d87b/images/Sem-nome-646-x-480-px-300-x-350-px-15.png" alt="Sala de mentoria 2" class="rounded-2xl object-cover w-full h-full shadow-lg border-2 border-gold-brand/50">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Pacotes de Patrocínio -->
+        <section id="slide7" class="slide flex flex-col items-center justify-center p-8">
+            <div class="text-center"><h2 class="font-heading text-4xl md:text-5xl text-gold-brand">Escolha seu Destaque</h2><p class="mt-2 text-gray-300">*Cotas limitadas a 1 empresa por setor.*</p></div>
+            <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl w-full">
+                <div class="card flex flex-col p-6">
+                    <h3 class="font-heading text-3xl text-center">CONECTA</h3>
+                    <p class="text-center text-sm text-gray-400 italic mt-1">Para marcar presença e fortalecer o networking.</p>
+                    <div class="mt-6 text-gray-300 space-y-3 flex-grow">
+                        <p>✓ Menção especial no evento</p>
+                        <p>✓ Divulgação nas mídias sociais</p>
+                        <p>✓ Inclusão de materiais na eco bag<br><span class="text-xs text-gray-400 italic">(Material fornecido pelo patrocinador)</span></p>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <p class="text-lg">Condição Especial para Convidados:</p>
+                        <p class="text-3xl font-bold text-gold-brand">4x R$ 650,00</p>
+                        <p class="text-sm text-gray-400 line-through">Valor regular: 4x R$ 875,00</p>
+                    </div>
+                </div>
+                <div class="card flex flex-col p-6 border-4 relative transform lg:scale-110 bg-[#0A2240]">
+                    <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-gold-brand text-[#0A2240] px-4 py-1 rounded-full text-sm font-bold">MAIS POPULAR</div>
+                    <h3 class="font-heading text-3xl text-center text-gold-brand">PROTAGONISTA</h3>
+                    <p class="text-center text-sm text-gray-300 italic mt-1">Para ser a referência máxima no palco.</p>
+                    <div class="mt-6 text-gray-200 space-y-3 flex-grow">
+                        <p>✓ <span class="font-bold">Palestra de 30 min no palco principal</span></p>
+                        <p>✓ <span class="font-bold">Entrevista ao vivo no podcast</span></p>
+                        <p>✓ <span class="font-bold">Mentoria de 2 horas</span></p>
+                        <p>✓ Divulgação premium nas mídias</p>
+                        <p>✓ Participação no networking</p>
+                        <p>✓ Inclusão de materiais na eco bag<br><span class="text-xs text-gray-400 italic">(Material fornecido pelo patrocinador)</span></p>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <p class="text-lg">Condição Especial para Convidados:</p>
+                        <p class="text-4xl font-bold text-gold-brand">6x R$ 1.366,60</p>
+                        <p class="text-sm text-gray-400 line-through">Valor regular: 6x R$ 1.700,00</p>
+                    </div>
+                </div>
+                <div class="card flex flex-col p-6">
+                    <h3 class="font-heading text-3xl text-center">VOZ DO MERCADO</h3>
+                    <p class="text-center text-sm text-gray-400 italic mt-1">Para buscar autoridade e conexão direta.</p>
+                    <div class="mt-6 text-gray-300 space-y-3 flex-grow">
+                        <p>✓ Entrevista ao vivo no podcast</p>
+                        <p>✓ Mentoria de 1 hora</p>
+                        <p>✓ Divulgação nas mídias sociais</p>
+                        <p>✓ Inclusão de materiais na eco bag<br><span class="text-xs text-gray-400 italic">(Material fornecido pelo patrocinador)</span></p>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <p class="text-lg">Condição Especial para Convidados:</p>
+                        <p class="text-3xl font-bold text-gold-brand">4x R$ 1.200,00</p>
+                        <p class="text-sm text-gray-400 line-through">Valor regular: 4x R$ 1.275,00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Redes Sociais -->
+        <section id="slide8" class="slide flex items-center justify-center p-8 bg-cover bg-center" style="background-image: linear-gradient(rgba(10, 34, 64, 0.9), rgba(10, 34, 64, 0.9)), url('https://storage.googleapis.com/gemini-prod-us-west1-423901-d87b/images/Imagem_do_WhatsApp_de_2025-08-25_%C3%A0(s)_12.30.46_4e2b2aed.jpg');">
+            <div class="text-center max-w-3xl">
+                <h2 class="font-heading text-4xl md:text-5xl text-gold-brand">Conecte-se Conosco</h2>
+                <p class="mt-4 text-lg text-gray-300">Conheça mais sobre nosso trabalho, veja o alcance do nosso conteúdo e fique por dentro de todas as novidades do Summit seguindo nossas redes.</p>
+                <div class="mt-8 flex justify-center items-center gap-8">
+                    <a href="https://www.instagram.com/talksindico/" target="_blank" class="text-center text-gray-300 hover:text-gold-brand transition-colors duration-300">
+                        <svg class="w-16 h-16 mx-auto" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.067-.06-1.407-.06-4.123v-.08c0-2.643.012-2.987.06-4.043.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.341 2.52c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.148 2 12.575 2h.08zm0-1.802C9.846.198 9.49.182 8.428.23c-1.11.051-1.92.229-2.6.487a6.7 6.7 0 00-2.428 1.583 6.7 6.7 0 00-1.583 2.428c-.258.68-.436 1.49-.487 2.6-.048 1.062-.064 1.418-.064 4.188v.08c0 2.77.016 3.126.064 4.188.051 1.11.229 1.92.487 2.6a6.7 6.7 0 001.583 2.428 6.7 6.7 0 002.428 1.583c.68.258 1.49.436 2.6.487 1.062.048 1.418.064 4.188.064h.08c2.77 0 3.126-.016 4.188-.064 1.11-.051 1.92-.229 2.6-.487a6.7 6.7 0 002.428-1.583 6.7 6.7 0 001.583-2.428c.258-.68.436-1.49.487-2.6.048-1.062.064-1.418.064-4.188v-.08c0-2.77-.016-3.126-.064-4.188-.051-1.11-.229-1.92-.487-2.6a6.7 6.7 0 00-1.583-2.428 6.7 6.7 0 00-2.428-1.583c-.68-.258-1.49-.436-2.6-.487C15.152.182 14.8.198 12.234.198h-.08z" clip-rule="evenodd" /><path d="M12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 12.071a6.935 6.935 0 110-13.87 6.935 6.935 0 010 13.87z" /><path d="M16.949 6.865a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" /></svg>
+                        <span class="mt-2 block font-semibold">Instagram</span>
+                    </a>
+                    <a href="https://www.youtube.com/@Talksindico" target="_blank" class="text-center text-gray-300 hover:text-gold-brand transition-colors duration-300">
+                        <svg class="w-16 h-16 mx-auto" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.78 22 12 22 12s0 3.22-.42 4.814a2.506 2.506 0 01-1.768 1.768c-1.594.42-7.812.42-7.812.42s-6.218 0-7.812-.42a2.506 2.506 0 01-1.768-1.768C2 15.22 2 12 2 12s0-3.22.42-4.814a2.506 2.506 0 011.768-1.768C5.782 5 12 5 12 5s6.218 0 7.812.418zM9.75 15.5V8.5l6.5 3.5-6.5 3.5z" clip-rule="evenodd" /></svg>
+                        <span class="mt-2 block font-semibold">YouTube</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@talksindico" target="_blank" class="text-center text-gray-300 hover:text-gold-brand transition-colors duration-300">
+                        <svg class="w-16 h-16 mx-auto" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.04-5.36.01-4.03-.01-8.05.02-12.07z" /></svg>
+                        <span class="mt-2 block font-semibold">TikTok</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Próximos Passos -->
+        <section id="slide9" class="slide flex items-center justify-center p-8">
+            <div class="text-center max-w-3xl">
+                <img src="https://storage.googleapis.com/gemini-prod-us-west1-423901-d87b/images/logo_png.png" alt="Logo Talk Síndico" class="h-20 mx-auto mb-6">
+                <h2 class="font-heading text-4xl md:text-5xl text-gold-brand">Vamos Fazer História Juntos?</h2>
+                <p class="mt-4 text-lg text-gray-300">Sua marca no palco do maior encontro condominial do ano.</p>
+                <div class="mt-8 card p-8">
+                    <h3 class="font-heading text-2xl">Como Garantir sua Vaga:</h3>
+                    <ol class="mt-4 text-left inline-block space-y-2 text-lg">
+                        <li><span class="font-bold text-gold-brand">1. Escolha</span> o pacote ideal.</li>
+                        <li><span class="font-bold text-gold-brand">2. Responda</span> a este contato até <span class="font-bold">10/09/2025</span>.</li>
+                        <li><span class="font-bold text-gold-brand">3. Nossa equipe</span> formalizará a parceria.</li>
+                    </ol>
+                    <div class="mt-6 border-t-2 border-gold-brand pt-4">
+                        <p class="font-semibold">Fale com a gente:</p>
+                        <p>talksindico@gmail.com | (41) 99987-4274</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Navigation Arrows -->
+    <div id="prevBtn" class="nav-arrow hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="m15 18-6-6 6-6"/></svg>
+    </div>
+    <div id="nextBtn" class="nav-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Script de personalização do nome
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const sponsorName = urlParams.get('nome');
+                if (sponsorName) {
+                    const nameElement = document.getElementById('sponsor-name');
+                    if(nameElement) {
+                        nameElement.textContent = sponsorName.replace(/\+/g, ' ');
+                    }
+                }
+            } catch (e) {
+                console.error("Erro ao personalizar nome:", e);
+            }
+
+            // Script de navegação dos slides
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+                prevBtn.classList.toggle('hidden', index === 0);
+                nextBtn.classList.toggle('hidden', index === slides.length - 1);
+            }
+
+            function nextSlide() {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            }
+
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            }
+
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
